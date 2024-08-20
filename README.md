@@ -8,5 +8,5 @@ You could choose one of languages or add your own in `unitsinglecomments.pas`. J
 addElement(commentMap, 'Your Language', 'Comment String');
 ```
 Then compile application with Lazarus
-### Future plans:
+## Future plans:
 In future, I want add some more functionality like ignoring multiple strings commentary, single operators like begin/end or curly brackets '{}'
