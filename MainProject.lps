@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="MainProject.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos Y="25"/>
+        <UsageCount Value="70"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitgui.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnitGUI"/>
+        <TopLine Value="35"/>
+        <CursorPos X="43" Y="52"/>
+        <UsageCount Value="70"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitparsesoursecode.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitParseSourseCode"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="75" Y="14"/>
+        <UsageCount Value="70"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitassociatearray.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitAssociateArray"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="21"/>
+        <CursorPos X="13" Y="59"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitsinglecomments.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitSingleComments"/>
+        <EditorIndex Value="4"/>
+        <CursorPos Y="27"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\Downloads\Notepade++\test.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitgui.lfm"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="6"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="MainProject.lpi"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="84"/>
+        <CursorPos X="17" Y="11"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="XML"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="unitsinglecomments.pas"/>
+        <Caret Line="20" Column="5" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="unitsinglecomments.pas"/>
+        <Caret Line="8" Column="4"/>
+      </Position>
+      <Position>
+        <Filename Value="unitsinglecomments.pas"/>
+        <Caret Line="8" Column="7" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="unitassociatearray.pas"/>
+        <Caret Column="24"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="43" Column="55" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="44" Column="55" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="43" Column="55" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="44" Column="38" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="unitparsesoursecode.pas"/>
+        <Caret Line="14" Column="63"/>
+      </Position>
+      <Position>
+        <Filename Value="unitparsesoursecode.pas"/>
+        <Caret Line="33" Column="65" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="43" Column="43" TopLine="33"/>
+      </Position>
+      <Position>
+        <Filename Value="unitparsesoursecode.pas"/>
+        <Caret Line="33" Column="65" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="unitparsesoursecode.pas"/>
+        <Caret Line="67" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="unitassociatearray.pas"/>
+        <Caret Column="24"/>
+      </Position>
+      <Position>
+        <Filename Value="unitsinglecomments.pas"/>
+        <Caret Line="25" Column="43" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="40" Column="5" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="39" Column="18" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="9" Column="42"/>
+      </Position>
+      <Position>
+        <Filename Value="unitsinglecomments.pas"/>
+        <Caret Line="8" Column="7" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="unitparsesoursecode.pas"/>
+        <Caret Line="14" Column="45"/>
+      </Position>
+      <Position>
+        <Filename Value="unitparsesoursecode.pas"/>
+        <Caret Line="33" Column="58" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="unitparsesoursecode.pas"/>
+        <Caret Line="47" Column="97" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="unitparsesoursecode.pas"/>
+        <Caret Line="14" Column="75"/>
+      </Position>
+      <Position>
+        <Filename Value="unitsinglecomments.pas"/>
+        <Caret Line="27" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="48" Column="29" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="57" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="MainProject.lpr"/>
+        <Caret Line="19" Column="28"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="48" Column="34" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="21" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="unitgui.pas"/>
+        <Caret Line="48" Column="34" TopLine="35"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

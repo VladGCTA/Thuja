@@ -1,0 +1,95 @@
+object MainForm: TMainForm
+  Left = 620
+  Height = 160
+  Top = 349
+  Width = 540
+  Caption = 'Thuja'
+  ClientHeight = 160
+  ClientWidth = 540
+  Color = 2434341
+  DesignTimePPI = 120
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clSilver
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  LCLVersion = '3.2.0.0'
+  object LabelFileName: TLabel
+    Left = 16
+    Height = 21
+    Top = 16
+    Width = 91
+    Caption = 'LabelName'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clSilver
+    Font.Height = -18
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object EditEnterFileName: TEdit
+    Left = 16
+    Height = 27
+    Top = 52
+    Width = 500
+    Color = 1710618
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clSilver
+    Font.Height = -17
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+    OnKeyDown = PushEnter
+  end
+  object ButtonOk: TSpeedButton
+    Left = 16
+    Height = 35
+    Top = 107
+    Width = 141
+    Caption = 'OK'
+    Color = 1381653
+    Flat = True
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -18
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Transparent = False
+    OnClick = ButtonOkClick
+    ParentFont = False
+  end
+  object LanguagesComboBox: TComboBox
+    Left = 376
+    Height = 27
+    Top = 107
+    Width = 125
+    AutoDropDown = True
+    Color = clWhite
+    DoubleBuffered = True
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -17
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ItemHeight = 19
+    ItemIndex = 0
+    Items.Strings = (
+      'C++'
+      'C'
+      'Pascal'
+      'Python'
+    )
+    ParentDoubleBuffered = False
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+    Text = 'C++'
+  end
+end
