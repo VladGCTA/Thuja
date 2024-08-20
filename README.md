@@ -1,4 +1,5 @@
 This is a very simple Lazarus application that I created to study LCL (Lazarus Component Library)
+![Preview](preview/preview.jpg)
 # Features:
 Counts lines of source code excluding comment lines and empty lines
 Allows you to choose from predefined programming languages or add your own

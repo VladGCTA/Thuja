@@ -5,7 +5,7 @@ unit UnitGUI;
 interface
 
 uses
-  Classes, SysUtils, Forms, Dialogs, StdCtrls, Buttons, Menus,
+  Classes, SysUtils, Forms, Dialogs, StdCtrls, Buttons, Menus, ExtCtrls,
   UnitParseSourseCode, UnitAssociateArray, UnitSingleComments;
 
 type
@@ -14,12 +14,14 @@ type
 
   TMainForm = class(TForm)
     LanguagesComboBox: TComboBox;
-    EditEnterFileName: TEdit;
-    LabelFileName: TLabel;
+    EditEnterFileName: TEdit;    LabelFileName: TLabel;
     ButtonOk: TSpeedButton;
+    OpenDialogChooseFile: TOpenDialog;
+    ButtonOpenFile: TSpeedButton;
+    PanelButton: TPanel;
+    procedure ButtonChooseFileClick(Sender: TObject);
     procedure ButtonOkClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure PushEnter(Sender: TObject; var Key: Word);
   private
 
   public
@@ -28,6 +30,7 @@ type
 
 var
   MainForm: TMainForm;
+
 
 implementation
 
@@ -41,11 +44,11 @@ var
   language: String;
   currentSingleComment: String;
 begin
-  fileName := Self.EditEnterFileName.Text;
+  fileName := Self.OpenDialogChooseFile.FileName;
   language := LanguagesComboBox.Text;
   currentSingleComment := findElement(commentMap, language);
   try
-    ShowMessage('Code lines: ' + IntToStr(UnitParseSourseCode.readSourceCodeFile(fileName, currentSingleComment)));
+    self.EditEnterFileName.Text := IntToStr(UnitParseSourseCode.readSourceCodeFile(fileName, currentSingleComment));
   except
     on Ex: Exception do
     begin
@@ -54,17 +57,24 @@ begin
   end;
 end;
 
+procedure TMainForm.ButtonChooseFileClick(Sender: TObject);
+begin
+  if OpenDialogChooseFile.Execute then
+  begin
+    if not fileExists(OpenDialogChooseFile.Filename) then
+    begin
+      ShowMessage('File doesn''t exist!');
+    end;
+  end
+  else
+  begin
+    ShowMessage('No file selected');
+  end;
+end;
+
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
 
-end;
-
-procedure TMainForm.PushEnter(Sender: TObject; var Key: Word);
-begin
-  if Key = 13 then // if press Enter key
-  begin
-  ButtonOKClick(Sender);
-  end;
 end;
 
 end.
