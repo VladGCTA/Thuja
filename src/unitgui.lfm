@@ -1,11 +1,11 @@
 object MainForm: TMainForm
   Left = 601
-  Height = 148
+  Height = 150
   Top = 332
-  Width = 478
+  Width = 480
   Caption = 'Thuja'
-  ClientHeight = 148
-  ClientWidth = 478
+  ClientHeight = 150
+  ClientWidth = 480
   Color = 2434341
   Constraints.MaxHeight = 150
   Constraints.MaxWidth = 480
@@ -27,8 +27,8 @@ object MainForm: TMainForm
     AnchorSideBottom.Control = EditEnterFileName
     Left = 0
     Height = 21
-    Top = 28
-    Width = 478
+    Top = 30
+    Width = 480
     Align = alBottom
     Alignment = taCenter
     BorderSpacing.Top = 15
@@ -51,8 +51,8 @@ object MainForm: TMainForm
     AnchorSideBottom.Side = asrCenter
     Left = 120
     Height = 27
-    Top = 64
-    Width = 238
+    Top = 66
+    Width = 240
     Align = alBottom
     Alignment = taCenter
     Anchors = [akBottom]
@@ -72,13 +72,13 @@ object MainForm: TMainForm
   object PanelButton: TPanel
     Left = 0
     Height = 57
-    Top = 91
-    Width = 478
+    Top = 93
+    Width = 480
     Align = alBottom
     AutoSize = True
     BevelOuter = bvNone
     ClientHeight = 57
-    ClientWidth = 478
+    ClientWidth = 480
     ParentBackground = False
     TabOrder = 1
     UseDockManager = False
@@ -138,7 +138,7 @@ object MainForm: TMainForm
       Left = 318
       Height = 27
       Top = 15
-      Width = 130
+      Width = 132
       Align = alLeft
       Anchors = [akTop, akLeft, akRight, akBottom]
       AutoDropDown = True

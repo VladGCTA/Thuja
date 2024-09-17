@@ -7,55 +7,59 @@ interface
 uses Classes, SysUtils;
 
 var
-  sourceCodeFile: TextFile;
-  currentLine: String;
-  i: Integer;
+  SourceCodeFile: TextFile; // Contain reading text file
+  CurrentLine: String; // Temp string with current line
+  i: Integer; // Temp int for loop
 
-function readsourceCodeFile(fileName: String; currentSingleComment: String): Integer;
+function ReadSourceCodeFile(FileName: String; CurrentSingleComment: String): Integer;
 
 implementation
 
-  function startWith(subStr: String; sourceStr: String): Boolean;
+  function StartWith(SubStr: String; SourceStr: String): Boolean;
+  {Return True if string start with substring, else return False}
   begin
-    Result := Copy(sourceStr, 1, Length(subStr)) = subStr;
+    Result := Copy(SourceStr, 1, Length(subStr)) = SubStr;
   end;
 
-  function isEmpty(currentString: String): Boolean;
+  function isEmpty(CurrentString: String): Boolean;
+  {Return True if string empty else return False}
   begin
-    Result := currentString = '';
+    Result := CurrentString = '';
   end;
 
-  function isSingleComment(currentString: String; currentSingleComment: String): Boolean;
+  function IsSingleComment(CurrentString: String; CurrentSingleComment: String): Boolean;
+  {Return True if string contain only single comment (Start with single
+  comment) else return False}
   begin
-    Result := startWith(currentSingleComment, Trim(currentString));
+    Result := StartWith(CurrentSingleComment, Trim(CurrentString));
   end;
 
-  function readsourceCodeFile(fileName: String; currentSingleComment: String): Integer;
+  function ReadSourceCodeFile(FileName: String; CurrentSingleComment: String): Integer;
   begin
-    // Assing
-    AssignFile(sourceCodeFile, fileName);
+    // Assing File
+    AssignFile(SourceCodeFile, FileName);
 
     try
-      Reset(sourceCodeFile);
+      Reset(SourceCodeFile);
       Result := 0;
 
-      while not EOF(sourceCodeFile) do
+      while not EOF(SourceCodeFile) do
       begin
-        ReadLn(sourceCodeFile, currentLine);
+        ReadLn(SourceCodeFile, CurrentLine);
 
 
-        if not (isEmpty(currentLine)) and not (isSingleComment(currentLine, currentSingleComment)) then
+        if not (isEmpty(CurrentLine)) and not (IsSingleComment(CurrentLine, CurrentSingleComment)) then
         begin
           Result := Result + 1;
         end;
       end;
 
-      CloseFile(sourceCodeFile);
+      CloseFile(SourceCodeFile); // Close file if all gone good
 
     except
       on Ex: Exception do
       begin
-        CloseFile(sourceCodeFile);
+        CloseFile(SourceCodeFile); // Close file if there are error
       end;
 
     end;

@@ -16,7 +16,7 @@ uses
 {$R *.res}
 
 begin
-  initializationCommentMap;
+  initializationCommentMap; // Initializate associate array
   RequireDerivedFormResource:=True;
   Application.Scaled:=True;
   Application.Initialize;

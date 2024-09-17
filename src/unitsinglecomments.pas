@@ -7,7 +7,7 @@ interface
 uses
   UnitAssociateArray;
 
-var commentMap: TSingleCommentMap;
+var CommentMap: TSingleCommentMap;
 
 procedure initializationCommentMap;
 
@@ -15,14 +15,14 @@ implementation
 
   procedure initializationCommentMap;
   begin
-    SetLength(CommentMap.comment, 0);
+    SetLength(CommentMap.Comment, 0);
 
-    addElement(commentMap, 'Pascal', '//');
-    addElement(commentMap, 'C++', '//');
-    addElement(commentMap, 'C', '//');
-    addElement(commentMap, 'Java', '//');
+    addElement(CommentMap, 'Pascal', '//');
+    addElement(CommentMap, 'C++', '//');
+    addElement(CommentMap, 'C', '//');
+    addElement(CommentMap, 'Java', '//');
 
-    addElement(commentMap, 'Python', '#');
+    addElement(CommentMap, 'Python', '#');
   end;
 
 end.

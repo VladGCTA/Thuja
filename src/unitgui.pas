@@ -19,9 +19,11 @@ type
     OpenDialogChooseFile: TOpenDialog;
     ButtonOpenFile: TSpeedButton;
     PanelButton: TPanel;
+
     procedure ButtonChooseFileClick(Sender: TObject);
     procedure ButtonOkClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+
   private
 
   public
@@ -40,15 +42,18 @@ implementation
 
 procedure TMainForm.ButtonOkClick(Sender: TObject);
 var
-  fileName: String;
-  language: String;
-  currentSingleComment: String;
+  FileName: String;
+  Language: String;
+  CurrentSingleComment: String; { Contain chosen single comment string (#
+  in python, // in C, C++ or Pascal and etc. Available comment symbols
+  are defined in UnitSingleComments}
+
 begin
-  fileName := Self.OpenDialogChooseFile.FileName;
-  language := LanguagesComboBox.Text;
-  currentSingleComment := findElement(commentMap, language);
+  FileName := Self.OpenDialogChooseFile.FileName;
+  Language := LanguagesComboBox.Text;
+  CurrentSingleComment := FindElement(CommentMap, Language);
   try
-    self.EditEnterFileName.Text := IntToStr(UnitParseSourseCode.readSourceCodeFile(fileName, currentSingleComment));
+    Self.EditEnterFileName.Text := IntToStr(UnitParseSourseCode.ReadSourceCodeFile(FileName, CurrentSingleComment));
   except
     on Ex: Exception do
     begin
@@ -61,14 +66,14 @@ procedure TMainForm.ButtonChooseFileClick(Sender: TObject);
 begin
   if OpenDialogChooseFile.Execute then
   begin
-    if not fileExists(OpenDialogChooseFile.Filename) then
+    if not FileExists(OpenDialogChooseFile.FileName) then
     begin
-      ShowMessage('File doesn''t exist!');
+      ShowMessage('File doesn''t exist!'); // Message if file doesn't exist
     end;
   end
   else
   begin
-    ShowMessage('No file selected');
+    ShowMessage('No file selected'); // Message if file didn't selected
   end;
 end;
 

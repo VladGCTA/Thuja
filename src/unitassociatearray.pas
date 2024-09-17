@@ -5,56 +5,58 @@ unit UnitAssociateArray;
 interface
 
 type
+  {Simple assotiate array with key=Language (string) and value=single Comment
+  operator (string)}
   TSingleComment = record
-    language: String;
-    singleCommentOperator: String;
+    Language: String;
+    SingleCommentOperator: String;
   end;
 
   TSingleCommentMap = record
-    comment: array of TSingleComment;
+    Comment: array of TSingleComment;
   end;
 
-  procedure addElement(var arrMap: TSingleCommentMap; language: String; singleCommentOperator:string);
-  function findElement(arrMap: TSingleCommentMap; language: String): String;
+  procedure AddElement(var ArrMap: TSingleCommentMap; Language: String; SingleCommentOperator:string);
+  function FindElement(ArrMap: TSingleCommentMap; Language: String): String;
 
 implementation
 
-  procedure addElement(var arrMap: TSingleCommentMap; language: String; singleCommentOperator:string);
+  procedure AddElement(var ArrMap: TSingleCommentMap; Language: String; SingleCommentOperator:string);
   var
-    newIndex: Integer;
+    NewIndex: Integer;
     i: Integer;
   begin
 
-    for i := 0 to High(arrMap.comment) do
+    for i := 0 to High(ArrMap.Comment) do
     begin
-      if arrMap.comment[i].language = language then
+      if ArrMap.Comment[i].Language = Language then
       begin
-        arrMap.comment[i].language := language;
+        ArrMap.Comment[i].Language := Language;
         Exit;
       end;
     end;
-    newIndex := Length(arrMap.comment);
-    SetLength(arrMap.comment, newIndex + 1);
+    NewIndex := Length(ArrMap.Comment);
+    SetLength(ArrMap.Comment, NewIndex + 1);
 
-    arrMap.comment[newIndex].language := language;
-    arrMap.comment[newIndex].singleCommentOperator := singleCommentOperator;
+    ArrMap.Comment[NewIndex].Language := Language;
+    ArrMap.Comment[NewIndex].SingleCommentOperator := SingleCommentOperator;
   end;
 
-  function findElement(arrMap: TSingleCommentMap; language: String): String;
+  function FindElement(ArrMap: TSingleCommentMap; Language: String): String;
   var
     i: Integer;
   begin
-    if Length(arrMap.comment) = 0 then
+    if Length(ArrMap.Comment) = 0 then
       begin
         Result := '';
         Exit;
       end;
 
-    for i := Low(arrMap.comment) to High(arrMap.comment) do
+    for i := Low(ArrMap.Comment) to High(ArrMap.Comment) do
     begin
-      if arrMap.comment[i].language = language then
+      if ArrMap.Comment[i].Language = Language then
         begin
-          Result := arrMap.comment[i].singleCommentOperator;
+          Result := ArrMap.Comment[i].SingleCommentOperator;
           Exit;
         end;
     end;
